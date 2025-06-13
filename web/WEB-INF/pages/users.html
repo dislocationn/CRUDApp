@@ -15,13 +15,13 @@
         <td th:text="${user.name}"></td>
         <td th:text="${user.email}"></td>
         <td>
-            <a th:href="@{/user/edit/{id}(id=${user.id})}">Edit</a> |
-            <a th:href="@{/user/delete/{id}(id=${user.id})}">Delete</a>
+            <a th:href="@{/users/edit/{id}(id=${user.id})}">Edit</a> |
+            <a th:href="@{/users/delete/{id}(id=${user.id})}">Delete</a>
         </td>
     </tr>
 </table>
 
 <br>
-<a th:href="@{/user/add}">Add New User</a>
+<a th:href="@{/users/add}">Add New User</a>
 </body>
 </html>

@@ -10,13 +10,13 @@
     <p th:text="${error}"></p>
 </div>
 
-<form th:action="@{/user/add}" th:object="${user}" method="post">
+<form th:action="@{/users/add}" th:object="${user}" method="post">
     Name: <input type="text" th:field="*{name}"><br>
     Email: <input type="email" th:field="*{email}"><br>
     <button type="submit">Add</button>
 </form>
 
 <br>
-<a th:href="@{/user}">Back to List</a>
+<a th:href="@{/users}">Back to List</a>
 </body>
 </html>

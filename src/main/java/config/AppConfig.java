@@ -1,5 +1,6 @@
 package config;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -70,9 +71,9 @@ public class AppConfig {
     }
 
     @Bean
-    public HibernateTransactionManager getHiberTrMan () {
+    public HibernateTransactionManager transactionManager (SessionFactory sessionFactory) {
         HibernateTransactionManager trMan = new HibernateTransactionManager();
-        trMan.setSessionFactory(getSesFacBean().getObject());
+        trMan.setSessionFactory(sessionFactory);
         return trMan;
     }
 }
